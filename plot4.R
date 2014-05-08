@@ -5,7 +5,7 @@ mySql <- "SELECT * from file WHERE Date = '1/2/2007' OR Date = '2/2/2007'"
 power<- read.csv.sql(myFile, sql=mySql, sep=";")
 power$newDate<-paste(power$Date,power$Time)
 power$newDate<-strptime(power$newDate,"%d/%m/%Y %H:%M:%S")
-par(mfcol=c(2,2))
+par(mfcol=c(2,2),mar=c(4,4,2,2))
 plot(power$newDate, power$Global_active_power, type="l", ylab="Global Active Power", xlab="",bg = "transparent")
 plot(power$newDate, power$Sub_metering_1, type="n",xlab="", ylab="Energy sub metering",bg = "transparent")
 points(power$newDate, power$Sub_metering_1, type="l", col="black")
