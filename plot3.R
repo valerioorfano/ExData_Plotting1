@@ -9,7 +9,7 @@ plot(power$newDate, power$Sub_metering_1, type="n",xlab="", ylab="Energy sub met
 points(power$newDate, power$Sub_metering_1, type="l", col="black")
 points(power$newDate, power$Sub_metering_2, type="l", col="red")
 points(power$newDate, power$Sub_metering_3, type="l", col="blue")
-legend("topright",pch="___",col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 dev.copy(png,file="plot3.png")
 dev.off()
 

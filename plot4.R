@@ -11,7 +11,7 @@ plot(power$newDate, power$Sub_metering_1, type="n",xlab="", ylab="Energy sub met
 points(power$newDate, power$Sub_metering_1, type="l", col="black")
 points(power$newDate, power$Sub_metering_2, type="l", col="red")
 points(power$newDate, power$Sub_metering_3, type="l", col="blue")
-legend("topright",pch="___",bty = "n",cex=0.5,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lty=1,bty = "n",cex=0.5,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 plot(power$newDate, power$Voltage, type="l",xlab="datetime", ylab="Voltage",bg = "transparent")
 plot(power$newDate, power$Global_reactive_power, type="l",xlab="datetime", ylab="Global_reactive_power",bg = "transparent")
 dev.copy(png,file="plot4.png")
