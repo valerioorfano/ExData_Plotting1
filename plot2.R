@@ -6,6 +6,6 @@ power<- read.csv.sql(myFile, sql=mySql, sep=";")
 power$newDate<-paste(power$Date,power$Time)
 power$newDate<-strptime(power$newDate,"%d/%m/%Y %H:%M:%S")
 plot(power$newDate, power$Global_active_power, type="l", ylab="Global Active Power (Kilowatts)", xlab="",bg = "transparent")
-dev.copy(png,file="plot2.png")
+dev.copy(png,file="plot2.png", width = 480, height = 480)
 dev.off()
 

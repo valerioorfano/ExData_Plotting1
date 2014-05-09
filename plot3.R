@@ -10,6 +10,6 @@ points(power$newDate, power$Sub_metering_1, type="l", col="black")
 points(power$newDate, power$Sub_metering_2, type="l", col="red")
 points(power$newDate, power$Sub_metering_3, type="l", col="blue")
 legend("topright",lty=1,xjust = 0, yjust = 1,y.intersp=0.8,x.intersp=0.5,cex=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
-dev.copy(png,file="plot3.png")
+dev.copy(png,file="plot3.png", width = 480, height = 480)
 dev.off()
 
